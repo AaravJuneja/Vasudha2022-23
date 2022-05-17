@@ -49,6 +49,30 @@
           <p class="Description" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus est, tincidunt pretium lorem at, varius consectetur justo. Vivamus condimentum eu lacus vel tempor. Aliquam id auctor leo. Aenean ultrices nisl felis, eu rhoncus metus molestie sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dolor enim, lacinia quis egestas a, placerat at augue. Fusce ullamcorper urna et metus pharetra posuere. Pellentesque nibh nulla, tempor sed gravida eget, pretium vel mi.
           </p>
             </div>  
-          </div>    
+          </div> 
+          
+          <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCEc9KL1JLJQyLWqYMn5kO6OytbPvDLOKw",
+              authDomain: "vasudha-2022-23.firebaseapp.com",
+              projectId: "vasudha-2022-23",
+              storageBucket: "vasudha-2022-23.appspot.com",
+              messagingSenderId: "333093383398",
+              appId: "1:333093383398:web:f95d3c52b54b4a333a9f27",
+              measurementId: "G-4K6MFPLE4C"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
   </body>
 </html>

@@ -53,23 +53,6 @@
     }
   }
 
-.box1 {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: DodgerBlue;
-}
-
-.box1 > div {
-  background-color:#FFA500;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-
-
   .container {
     display: flex;
     flex-wrap: nowrap;
