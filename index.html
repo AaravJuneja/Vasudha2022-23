@@ -4,24 +4,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css.map">
     <script src="main.js"></script>
     <script src="bootstrap.js"></script>
+    <script src="bootstrap.js.map"></script>
   </head>
-  
-  <body>
 
-    <div class="topnav" id="myTopnav">
+  <body onload="myFunction()" style="margin:0;"></body>
+
+  <div class="topnav" id="myTopnav">
          <a href="#home" class="active">Home</a>
          <a href="3d-model.html">3D-model</a>
-         <a href="about-us.html">About Us</a>
-         <!-- Login Page 
-        <a href="login.html">Login</a>-->
+         <a href="about-us.html">About Us</a> 
+         <a href="login.html"><button>
+          Sign up
+          <div class="arrow-wrapper">
+              <div class="arrow"></div>
+      
+          </div>
+      </button>
+      </a>
          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
     </div>
 
-    <br><br><br>
+    <br><br>
     
     <div class="text">
 
@@ -50,41 +58,6 @@
           </p>
             </div>  
           </div> 
-          
-          <script type="module">
-            
-            // Import the functions you need from the SDKs you need
-            import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyCEc9KL1JLJQyLWqYMn5kO6OytbPvDLOKw",
-              authDomain: "vasudha-2022-23.firebaseapp.com",
-              projectId: "vasudha-2022-23",
-              storageBucket: "vasudha-2022-23.appspot.com",
-              messagingSenderId: "333093383398",
-              appId: "1:333093383398:web:f95d3c52b54b4a333a9f27",
-              measurementId: "G-4K6MFPLE4C"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-            const db = getFirestore(app);
-
-            // Get a list of cities from your database
-            async function getCities(db) {
-            const citiesCol = collection(db, 'cities');
-            const citySnapshot = await getDocs(citiesCol);
-            const cityList = citySnapshot.docs.map(doc => doc.data());
-            return cityList;
-          }
-          </script>
-          
+    </div>
   </body>
 </html>
